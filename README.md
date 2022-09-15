@@ -1,3 +1,5 @@
+## https://airbnb-beta.onrender.com
+
 # Rutas
 
 - /api/v1/users
@@ -10,10 +12,10 @@
 - /api/v1/auth/verify-account
 
 - /api/v1/users
-- - GET 
+- - GET
 
 - /api/v1/users/:id
-- - GET  
+- - GET
 - - PUT (ADMIN)
 - - DELETE (ADMIN)
 
@@ -30,10 +32,10 @@
 - - POST
 
 - /api/v1/auth/password-recovery
-- - POST 
+- - POST
 - - PATCH
 
-# Paths de mi usuario a traves de  mi aplicacion
+# Paths de mi usuario a traves de mi aplicacion
 
 [✅] registrar mi usuario
 [✅] loggear mi usuario
@@ -49,7 +51,7 @@
 2. puede ver la informacion de un lugar
 3. Reservar
 4. Cancelar su reservacion
-4. Dar un score una vez finalizada la reservacion
+5. Dar un score una vez finalizada la reservacion
 
 ### Host
 
@@ -78,26 +80,30 @@
 10. Modificar un usuario
 11. Ver lugares de los hosts
 
-
 ### Accommodations
 
 /api/v1/accommodations
 
 /
+
 - GET
 - POST
 
 /:id
+
 - GET
 - DELETE
 - PUT
 - PATCH
 
 /:id/available/?arrival=value&departure=value
-- GET 
+
+- GET
 
 /api/v1/accommodations/:id/make-reservation
+
 - POST
 
-# Ejemplo de documentacion 
+# Ejemplo de documentacion
+
 https://petstore.swagger.io/v2/swagger.json
