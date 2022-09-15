@@ -1,0 +1,129 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "API Rest Clon de Airbnb",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/v1/users": {
+            "get": {
+                "description": "Get all users",
+                "tags": ["Users", "v1"],
+                "responses": {
+                    "200": {
+                        "description": "Get successfully all the users"
+                    },
+                    "400": {
+                        "description": "Generate an error if the the request is not resolved"
+                    }
+                }
+            }
+        },
+        "/api/v1/users/{id}": {
+            "get":{
+                "parameters":[
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of an user",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "description": "Get an of a specific ID",
+                "tags": ["Users", "v1"],
+                "responses": {
+                    "200": {
+                        "description": "Get successfully an user with an specific ID "
+                    },
+                    "400": {
+                        "description": "Generate an error if the the request is not resolved"
+                    }
+                }
+            },
+
+            "delete": {
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID Of an User",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "description": "Allows delete users to an Admin profile",
+                "tags": ["Users", "v1"],
+                "responses": {
+                    "200": {
+                        "description": "The user has been deleted"
+                    },
+                    "400": {
+                        "description": "Generate an error if the the request is not resolved"
+                    }
+                }
+            },
+            
+            "put": {
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID Of an User",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "description": "Allows to an admin edit the info of an user",
+                "tags": ["Users", "v1"],
+                "responses": {
+                    "200": {
+                        "description": "The user has been edited"
+                    },
+                    "400": {
+                        "description": "Generate an error if the the request is not resolved"
+                    }
+                }
+            }
+        },
+        "/api/v1/users/me": {
+            "get": {
+                "description": "Get the info of the logged user",
+                "tags": ["Users", "v1"],
+                "responses": {
+                    "200": {
+                        "description": "The info of the logged user has been obtained"
+                    },
+                    "400": {
+                        "description": "Generate an error if the the request is not resolved"
+                    }
+                }
+            },
+            "delete": {
+                "description": "Delete the user of the logged user",
+                "tags": ["Users", "v1"],
+                "responses": {
+                    "200": {
+                        "description": "The user has been deleted"
+                    },
+                    "400": {
+                        "description": "Generate an error if the the request is not resolved"
+                    }
+                }
+            },
+            "put": {
+                "description": "Edit the info of the logged user",
+                "tags": ["Users", "v1"],
+                "responses": {
+                    "200": {
+                        "description": "The info was edited successfully"
+                    },
+                    "400": {
+                        "description": "Generate an error if the the request is not resolved"
+                    }
+                }
+            }
+        }
+            
+        }
+    }
